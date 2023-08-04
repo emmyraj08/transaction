@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <style>
+a.es-button {
+    text-decoration: none !important;
+}
+
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+.es-desk-hidden {
+    display: none;
+    float: left;
+    overflow: hidden;
+    width: 0;
+    max-height: 0;
+    line-height: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+table td,
+body,
+.es-wrapper {
+    padding: 0;
+    Margin: 0;
+}
+
+.es-content,
+.es-header,
+.es-footer {
+    width: 100%;
+    table-layout: fixed !important;
+}
+
+img {
+    display: block;
+    font-size: 14px;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+p,
+hr {
+    Margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    Margin: 0;
+    font-family: roboto, 'helvetica neue', helvetica, arial, sans-serif;
+    letter-spacing: 0;
+}
+.es-left {
+    float: left;
+}
+
+.es-right {
+    float: right;
+}
+
+.es-menu td {
+    border: 0;
+}
+
+.es-menu td a img {
+    display: inline !important;
+    vertical-align: middle;
+}
+
+/*
+  END CONFIG STYLES
+  */
+s {
+    text-decoration: line-through;
+}
+
+a {
+    text-decoration: none;
+}
+
+.es-menu td a {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    display: block;
+}
+
+.es-wrapper {
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+.es-wrapper-color,
+.es-wrapper {
+    background-color: #eff2f7;
+}
+
+.es-content-body ,
+.es-footer-body p,
+.es-header-body p ,
+.es-infoblock p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.es-header {
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+
+.es-header-body p {
+    color: #efefef;
+    font-size: 12px;
+}
+
+.es-header-body a {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.es-content-body {
+    background-color: #fefefe;
+}
+
+.es-content-body p ,
+.es-content-body ul li,
+.es-content-body ol li {
+    font-size: 14px;
+}
+
+.es-content-body a {
+    font-size: 14px;
+}
+
+.es-footer {
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+
+.es-footer-body p{
+    color: #040F16;
+    font-size: 12px;
+}
+
+.es-footer-body a {
+    color: #040F16;
+    font-size: 12px;
+}
+
+.es-content-body p{
+    font-size: 14px;
+}
+
+.es-infoblock p{
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.es-infoblock a {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+h1 {
+    font-style: normal;
+    line-height: 120%;
+   
+}
+
+h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 120%;
+}
+
+h3 {
+    font-size: 16px;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0px;
+}
+
+.es-header-body h1 a,
+.es-content-body h1 a,
+.es-footer-body h1 a {
+    font-size: 26px;
+}
+
+.es-header-body h2 a,
+.es-content-body h2 a,
+.es-footer-body h2 a {
+    font-size: 18px;
+}
+
+.es-header-body h3 a,
+.es-content-body h3 a,
+.es-footer-body h3 a {
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 120%;
+}
+
+h5 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 120%;
+}
+
+h6 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 120%;
+}
+
+.es-header-body h4 a,
+.es-content-body h4 a,
+.es-footer-body h4 a {
+    font-size: 24px;
+}
+
+.es-header-body h5 a,
+.es-content-body h5 a,
+.es-footer-body h5 a {
+    font-size: 20px;
+}
+
+.es-header-body h6 a,
+.es-content-body h6 a,
+.es-footer-body h6 a {
+    font-size: 16px;
+}
+
+a.es-button,
+button.es-button {
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    background: #0c66ff;
+    border-radius: 0px 0px 0px 0px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    line-height: 120%;
+    color: #ffffff;
+    text-decoration: none !important;
+    width: auto;
+    text-align: center;
+    letter-spacing: 0;
+}
+
+.es-button-border {
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    display: inline-block;
+    border-radius: 0px 0px 0px 0px;
+    width: auto;
+}
+
+.es-button img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.es-fw,
+.es-fw .es-button {
+    display: block;
+}
+
+.es-il,
+.es-il .es-button {
+    display: inline-block;
+}
+
+
+.es-p20t {
+    padding-top: 20px;
+}
+
+.es-p15r {
+    padding-right: 15px;
+}
+
+.es-p20b {
+    padding-bottom: 20px;
+}
+
+.es-p15l {
+    padding-left: 15px;
+}
+
+.es-p15b {
+    padding-bottom: 15px;
+}
+
+.es-p10t {
+    padding-top: 10px;
+}
+
+.es-p5r {
+    padding-right: 5px;
+}
+
+.es-p10b {
+    padding-bottom: 10px;
+}
+
+.es-p5l {
+    padding-left: 5px;
+}
+
+.es-p40t {
+    padding-top: 40px;
+}
+
+.es-p40b {
+    padding-bottom: 40px;
+}
+
+.es-p10r {
+    padding-right: 10px;
+}
+
+.es-p10l {
+    padding-left: 10px;
+}
+
+.es-p30t {
+    padding-top: 30px;
+}
+
+.es-p20r {
+    padding-right: 20px;
+}
+
+.es-p30b {
+    padding-bottom: 30px;
+}
+
+.es-p20l {
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .es-m-p0r {
+        padding-right: 0px !important;
+    }
+    .es-m-p20b {
+        padding-bottom: 20px !important;
+    }
+    *[class="gmail-fix"] {
+        display: none !important;
+    }
+    p,
+    a {
+        line-height: 150% !important;
+    }
+    h1,
+    h1 a {
+        line-height: 120% !important;
+    }
+    h2,
+    h2 a {
+        line-height: 120% !important;
+    }
+
+    h3,
+    h3 a {
+        line-height: 120% !important;
+    }
+    h4,
+    h4 a {
+        line-height: 120% !important;
+    }
+    h5,
+    h5 a {
+        line-height: 120% !important;
+    }
+    h6,
+    h6 a {
+        line-height: 120% !important;
+    }
+    h1 {
+        font-size: 28px !important;
+        text-align: left;
+        line-height: 120%;
+    }
+    h2 {
+        font-size: 20px !important;
+        text-align: left;
+        line-height: 120%;
+    }
+    h3 {
+        font-size: 14px !important;
+        text-align: left;
+        line-height: 120%;
+    }
+
+    h4 {
+        font-size: 24px !important;
+        text-align: left;
+    }
+
+    h5 {
+        font-size: 20px !important;
+        text-align: left;
+    }
+
+    h6 {
+        font-size: 16px !important;
+        text-align: left;
+    }
+
+    .es-header-body h1 a,
+    .es-content-body h1 a,
+    .es-footer-body h1 a {
+        font-size: 28px !important;
+    }
+
+    .es-header-body h2 a,
+    .es-content-body h2 a,
+    .es-footer-body h2 a {
+        font-size: 20px !important;
+    }
+
+    .es-header-body h3 a,
+    .es-content-body h3 a,
+    .es-footer-body h3 a {
+        font-size: 14px !important;
+    }
+
+    .es-header-body h4 a,
+    .es-content-body h4 a,
+    .es-footer-body h4 a {
+        font-size: 24px !important;
+    }
+
+    .es-header-body h5 a,
+    .es-content-body h5 a,
+    .es-footer-body h5 a {
+        font-size: 20px !important;
+    }
+
+    .es-header-body h6 a,
+    .es-content-body h6 a,
+    .es-footer-body h6 a {
+        font-size: 16px !important;
+    }
+
+    .es-menu td a {
+        font-size: 14px !important;
+    }
+
+    .es-header-body p ,
+    .es-header-body a {
+        font-size: 14px !important;
+    }
+
+    .es-content-body p ,
+    .es-content-body a {
+        font-size: 14px !important;
+    }
+
+    .es-footer-body p,
+    .es-footer-body a {
+        font-size: 14px !important;
+    }
+
+    .es-infoblock p,
+    .es-infoblock a {
+        font-size: 14px !important;
+    }
+
+    .es-m-txt-c,
+    .es-m-txt-c h1,
+    .es-m-txt-c h2,
+    .es-m-txt-c h3,
+    .es-m-txt-c h4,
+    .es-m-txt-c h5,
+    .es-m-txt-c h6 {
+        text-align: center !important;
+    }
+
+    .es-m-txt-r,
+    .es-m-txt-r h1,
+    .es-m-txt-r h2,
+    .es-m-txt-r h3,
+    .es-m-txt-r h4,
+    .es-m-txt-r h5,
+    .es-m-txt-r h6 {
+        text-align: right !important;
+    }
+
+    .es-m-txt-j,
+    .es-m-txt-j h1,
+    .es-m-txt-j h2,
+    .es-m-txt-j h3,
+    .es-m-txt-j h4,
+    .es-m-txt-j h5,
+    .es-m-txt-j h6 {
+        text-align: justify !important;
+    }
+
+    .es-m-txt-l,
+    .es-m-txt-l h1,
+    .es-m-txt-l h2,
+    .es-m-txt-l h3,
+    .es-m-txt-l h4,
+    .es-m-txt-l h5,
+    .es-m-txt-l h6 {
+        text-align: left !important;
+    }
+
+    .es-m-txt-r img,
+    .es-m-txt-c img,
+    .es-m-txt-l img {
+        display: inline !important;
+    }
+    .es-spacer {
+        display: inline-table;
+    }
+
+    a.es-button,
+    button.es-button {
+        font-size: 14px !important;
+    }
+
+    .es-m-fw,
+    .es-m-fw.es-fw,
+    .es-m-fw .es-button {
+        display: block !important;
+    }
+
+    .es-m-il,
+    .es-m-il .es-button,
+    .es-social,
+    .es-social td,
+    .es-menu {
+        display: inline-block !important;
+    }
+
+    .es-adaptive table,
+    .es-left,
+    .es-right {
+        width: 100% !important;
+    }
+
+    .es-content table,
+    .es-header table,
+    .es-footer table,
+    .es-content,
+    .es-footer,
+    .es-header {
+        width: 100% !important;
+        max-width: 600px !important;
+    }
+
+    .adapt-img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .es-mobile-hidden,
+    .es-hidden {
+        display: none !important;
+    }
+
+    .es-desk-hidden {
+        width: auto !important;
+        overflow: visible !important;
+        float: none !important;
+        max-height: inherit !important;
+        line-height: inherit !important;
+        display: table-row !important;
+    }
+
+    tr.es-desk-hidden {
+        display: table-row !important;
+    }
+
+    table.es-desk-hidden {
+        display: table !important;
+    }
+
+    td.es-desk-menu-hidden {
+        display: table-cell !important;
+    }
+
+    .es-menu td {
+        width: 1% !important;
+    }
+
+    table.es-table-not-adapt,
+    .esd-block-html table {
+        width: auto !important;
+    }
+
+    .es-social td {
+        padding-bottom: 10px;
+    }
+
+    .h-auto {
+        height: auto !important;
+    }
+
+    p,
+    ul li,
+    ol li,
+    a {
+        font-size: 14px !important;
+    }
+
+    h1 a {
+        text-align: left;
+    }
+
+    h2 a {
+        text-align: left;
+    }
+
+    h3 a {
+        text-align: left;
+    }
+
+    a.es-button {
+        border-bottom-width: 20px !important;
+        border-right-width: 0px !important;
+        border-left-width: 0px !important;
+    }
+
+    a.es-button,
+    button.es-button {
+        display: inline-block !important;
+    }
+
+    .es-button-border {
+        display: inline-block !important;
+    }
+}
+    </style>
+</head>
+<body  style="font-family: sans-serif; background-color: #A3C4BC;">
+    <table class="es-wrapper" width="100%" cellpadding="0">
+        <tr>
+        <td class="esd-email-paddings" valign="top">
+     <!-----HEADER----->   
+     <table class="es-header" align="center">
+        <tbody>
+          <tr>
+          <td class="esd-stripe" align="center">
+            <table class="es-header-body" width="600"  align="center" style="background-color: #F9FBEF; border-top: #3f3f3f solid 1px; border-bottom: #3f3f3f solid 1px">
+            <tbody>
+              <tr>
+
+              <td class="esd-structure es-p20t es-p20b es-p15r es-p15l" align="left" >
+                  <table class="es-left" align="left">
+                    <tbody>
+                      <tr>
+                      <td width="110" align="left" class="esd-container-frame es-m-p20b">
+                        <table width="100%">
+                        <tbody>
+                          <tr>
+                          <td align="left" class="esd-block-text es-m-txt-c"><img src="Img/logo-no-background.png" alt="with us" width="150"></td>
+                          </tr>
+                        </tbody>
+                        </table></td>
+                      </tr>
+                    </tbody>
+                    </table>
+                <table align="right" class="es-right">
+                <tbody>
+                  <tr>
+
+                  <td width="220" class="esd-container-frame es-m-p20b" align="center" >
+                    <table width="100%">
+                    <tbody>
+                      <tr>
+
+                      <td class="esd-block-menu"  esd-tmp-menu-font-weight="bold" esd-tmp-menu-color="#cccccc">
+                        <table width="100%" class="es-menu" style="padding-top: 50px;">
+                        <tbody>
+                            <tr>
+                                <td align="center"  width="33.33%" class="es-p10t es-p10b es-p5r es-p5l" style="padding-top: 20px; padding-bottom: 0px;"><a target="_blank" href="#" style="font-weight: bold; color: #040F16; font-size: 15px;">Home</a></td>
+                                <td align="center" width="33.33%" class="es-p10t es-p10b es-p5r es-p5l" style="padding-top: 20px; padding-bottom: 0px;"><a target="_blank" href="#" style="font-weight: bold; color: #040F16; font-size: 15px;">Shop</a></td>
+                                <td align="center" width="33.33%" class="es-p10t es-p10b es-p5r es-p5l" style="padding-top: 20px; padding-bottom: 0px;"><a target="_blank" href="#" style="font-weight: bold; color: #040F16; font-size: 15px;">Contact </a></td>
+                                </tr>
+                        </tbody>
+                        </table></td>
+                      </tr>
+                    </tbody>
+                    </table></td>
+                  <!-- <td class="es-hidden" width="10"></td> -->
+                  </tr>
+                </tbody>
+                </table>
+               </td>
+              </tr>
+            </tbody>
+            </table></td>
+          </tr>
+        </tbody>
+        </table>
+        <table class="es-content" align="center">
+            <tbody>
+              <tr>
+              <td class="esd-stripe" align="center" >
+                <table  class="es-content-body" align="center" width="600" style="background-color: #F9FBEF;" >
+                <tbody>
+                  <tr>
+                  <td class="esd-structure es-p30t es-p15r es-p15l" align="left">
+                    <table width="100%" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        
+                      <td class="es-m-p0r esd-container-frame" width="570" valign="top" align="center" style="padding: 30px 0px;">
+                        <table width="100%" cellpadding="0">
+                        <tbody>
+                          <tr>
+                          <td align="left" class="esd-block-text"><h1>
+                            Thank You For Your Order!</h1></td>
+                          </tr>
+                          <td align="left" class="esd-block-text"> 
+                            <p style="padding:15px 0px; color:  #040F16; font-size: 20px; word-spacing: 0.1px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium iste ipsa numquam odio dolores, nam.
+                            </p>
+                          </td>
+                          </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                </tbody>
+                </table>
+                </td>
+            </tr>
+        </td>
+        </tr>
+        </table>
+     <!----ORDER------>   
+        <table class="es-header" align="center">
+        <tbody>
+          <tr>
+          <td class="esd-stripe" align="center">
+            <table class="es-header-body" width="600"  align="center" style="background-color:#F9FBEF;">
+            <tbody>
+                <tr>
+                    <td class="esd-structure es-p10t es-p10b es-p20r es-p20l" align="left" bgcolor="#c44d39" style="background-color: #413C58;" esd-img-prev-src="">
+                     <table class="es-right" align="right">
+                      <tbody>
+                       <tr>
+                        <td width="270" align="left" class="esd-container-frame es-m-p20b">
+                         <table width="100%">
+                          <tbody>
+                           <tr>
+                            <td align="right" class="esd-block-text es-m-txt-c" esd-links-color="#ffffff"><h2 style="color: #ffffff;"><strong><a target="_blank" style="color: #ffffff;">$374.99</a></strong></h2></td>
+                           </tr>
+                          </tbody>
+                         </table></td>
+                       </tr>
+                      </tbody>
+                     </table> 
+
+                     <table align="left" class="es-left">
+                      <tbody>
+                       <tr>
+                        <td width="270" class="esd-container-frame" align="left">
+                         <table width="100%">
+                          <tbody>
+                           <tr>
+                            <td align="left" class="esd-block-text es-m-txt-c"><h2 style="color: #ffffff;">Order Confirmation</h2></td>
+                           </tr>
+                         </tbody>
+                     </table>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+          </td>
+          </tr>
+        </tbody>
+    </table>
+              
+                      
+<!-------LIST-------->
+    <table  align="center" >
+       <tr >
+        <td class="esd-stripe" align="center">
+            <table class="es-header-body" width="600"  align="center" style="background-color: #F9FBEF;">
+                <td class="esd-structure es-p20t es-p20r es-p20l" align="left" esd-img-prev-src="">
+
+                    <table class="es-left" align="center">
+                    <tr>
+                    <td width="120" class="es-m-p20b esd-container-frame" align="center">
+                        <table width="100%" >
+                         <tbody>
+                          <tr>
+                           <td class="esd-block-image" align="center" style="font-size:0"><a target="_blank" href="#"><img class="adapt-img" src="https://qnbpwc.stripocdn.email/content/guids/CABINET_5c07eb981ee641b6657c40158334df4c/images/41641576054828899.jpeg" alt="Black Faux Suede" style="display: block;" width="120" title="Black Faux Suede"></a></td>
+                          </tr>
+                         </tbody>
+                        </table></td>
+                      </tr>
+                     </tbody>
+                    </table> 
+                    <table class="es-right" align="right">
+                    <tbody>
+                     <tr>
+                      <td width="420" align="left" class="esd-container-frame">
+                       <table width="100%">
+                        <tbody>
+                         <tr>
+                          <td class="esd-block-text es-p5b" align="left"><h2 class="product-name">Denim Stonewash</h2></td>
+                         </tr>
+                         <tr>
+                          <td align="left" class="esd-block-text"><h3 class="price">$80.00</h3></td>
+                         </tr>
+                         <tr>
+                          <td align="left" class="esd-block-text es-p5t es-p10b"><p style="color: #040F16;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p></td>
+                         </tr>
+                        </tbody>
+                       </table></td>
+                     </tr>
+                    </tbody>
+                   </table> 
+                   </td>
+                 </tr>
+                 <tr>
+                  <td class="esd-structure es-p20t es-p20r es-p20l" align="left" esd-img-prev-src="">
+                   <!--[if mso]><table width="560"><tr><td width="120" valign="top"><![endif]-->
+                   <table class="es-left" align="left">
+                    <tbody>
+                     <tr>
+                      <td width="120" class="es-m-p20b esd-container-frame" align="left">
+                       <table width="100%">
+                        <tbody>
+                         <tr>
+                          <td class="esd-block-image" align="center" style="font-size:0"><a target="_blank" href="#"><img class="adapt-img" src="https://qnbpwc.stripocdn.email/content/guids/CABINET_5c07eb981ee641b6657c40158334df4c/images/82991576054654193.jfif" alt="Blue dresses" style="display: block;" width="120" title="Blue dresses"></a></td>
+                         </tr>
+                        </tbody>
+                       </table></td>
+                     </tr>
+                    </tbody>
+                   </table> 
+                    <table class="es-right" align="right">
+                     <tbody>
+                      <tr>
+                       <td width="420" align="left" class="esd-container-frame">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td class="esd-block-text es-p5b" align="left"><h2 class="product-name">Denim Stonewash</h2></td>
+                          </tr>
+                          <tr>
+                           <td align="left" class="esd-block-text"><h3 class="price">$80.00</h3></td>
+                          </tr>
+                          <tr>
+                           <td align="left" class="esd-block-text es-p5t es-p10b"><p style="color: #040F16;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p></td>
+                          </tr>
+                         </tbody>
+                        </table></td>
+                      </tr>
+                     </tbody>
+                    </table> 
+                    <!--[if mso]></td></tr></table><![endif]--></td>
+                  </tr>
+                  <tr>
+                   <td class="esd-structure es-p20t es-p20r es-p20l" align="left" esd-img-prev-src="">
+                    <!--[if mso]><table width="560"><tr><td width="120" valign="top"><![endif]-->
+                    <table class="es-left" align="left">
+                     <tbody>
+                      <tr>
+                       <td width="120" class="es-m-p20b esd-container-frame" align="left">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td class="esd-block-image" align="center" style="font-size:0"><a target="_blank" href="#"><img class="adapt-img" src="https://qnbpwc.stripocdn.email/content/guids/CABINET_5c07eb981ee641b6657c40158334df4c/images/82991576054654193.jfif" alt="Blue dresses" style="display: block;" width="120" title="Blue dresses"></a></td>
+                          </tr>
+                         </tbody>
+                        </table></td>
+                      </tr>
+                     </tbody>
+                    </table> 
+                    <!--[if mso]></td><td width="20"></td><td width="420" valign="top"><![endif]-->
+                    <table class="es-right" align="right">
+                     <tbody>
+                      <tr>
+                       <td width="420" align="left" class="esd-container-frame">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td class="esd-block-text es-p5b" align="left"><h2 class="product-name">Blue dresses</h2></td>
+                          </tr>
+                          <tr>
+                           <td align="left" class="esd-block-text"><h3 class="price">$115.00</h3></td>
+                          </tr>
+                          <tr>
+                           <td align="left" class="esd-block-text es-p5t es-p10b"><p style="color: #040F16;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p></td>
+                          </tr>
+                         </tbody>
+                        </table></td>
+                      </tr>
+                     </tbody>
+                    </table> 
+                    </td>
+                  </tr>
+                  <tr>
+                   <td class="esd-structure es-p20t es-p20b es-p20r es-p20l" align="left" esd-img-prev-src="">
+                    <!--[if mso]><table width="560"><tr><td width="120" valign="top"><![endif]-->
+                    <table class="es-left" align="left">
+                     <tbody>
+                      <tr>
+                       <td width="120" class="es-m-p20b esd-container-frame" align="left">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td class="esd-block-image" align="center" style="font-size:0"><a target="_blank" href="#"><img class="adapt-img" src="https://qnbpwc.stripocdn.email/content/guids/CABINET_5c07eb981ee641b6657c40158334df4c/images/37831576054702676.jpeg" alt="Homme Tapered Smart" style="display: block;" width="120" title="Homme Tapered Smart"></a></td>
+                          </tr>
+                         </tbody>
+                        </table></td>
+                      </tr>
+                     </tbody>
+                    </table> 
+                    <!--[if mso]></td><td width="20"></td><td width="420" valign="top"><![endif]-->
+                    <table class="es-right" align="right">
+                     <tbody>
+                      <tr>
+                       <td width="420" align="left" class="esd-container-frame">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td class="esd-block-text es-p5b" align="left"><h2 class="product-name">Homme Tapered Smart</h2></td>
+                          </tr>
+                          <tr>
+                           <td align="left" class="esd-block-text"><h3 class="price">$99.99</h3></td>
+                          </tr>
+                          <tr>
+                           <td align="left" class="esd-block-text es-p5t es-p10b"><p style="color: #040F16;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p></td>
+                          </tr>
+                         </tbody>
+                        </table></td>
+                      </tr>
+                     </tbody>
+                    </table> 
+                    </td>
+                  </tr>
+                  <tr>
+                   <td class="esd-structure es-p10t es-p10b es-p20r es-p20l" align="left" bgcolor="#c44d39" style="background-color: #413C58;" esd-img-prev-src="">
+                    <!--[if mso]><table dir="rtl" width="560"><tr><td dir="ltr" width="270" valign="top"><![endif]-->
+                    <table class="es-right" align="right">
+                     <tbody>
+                      <tr>
+                       <td width="270" align="left" class="esd-container-frame es-m-p20b">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td align="right" class="esd-block-text es-m-txt-c" esd-links-color="#ffffff"><h2 style="color: #ffffff;"><strong><a target="_blank" style="color: #ffffff;">$374.99</a></strong></h2></td>
+                          </tr>
+                         </tbody>
+                        </table></td>
+                      </tr>
+                     </tbody>
+                    </table> 
+                    <!--[if mso]></td><td dir="ltr" width="20"></td><td dir="ltr" width="270" valign="top"><![endif]-->
+                    <table align="left" class="es-left">
+                     <tbody>
+                      <tr>
+                       <td width="270" class="esd-container-frame" align="left">
+                        <table width="100%">
+                         <tbody>
+                          <tr>
+                           <td align="left" class="esd-block-text es-m-txt-c"><h2 style="color: #ffffff;">Total</h2></td>
+                          </tr>
+                         </tbody>
+                        </table></td>
+                      </tr>
+                     </tbody>
+                    </table> 
+                   </td>
+                  </tr>
+                </table>
+            <table class="es-content" align="center">
+                <tbody>
+                  <tr>
+                  <td class="esd-stripe" align="center" >
+                    <table  class="es-content-body" align="center" width="600" style="background-color: #F9FBEF;" >
+                    <tbody>
+                      <tr>
+                      <td class="esd-structure es-p30t es-p15r es-p15l" align="left">
+                        <table width="100%" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td align="center" class="esd-block-button " style="padding: 20px;">
+                                <a href="#"  target="_blank" class="es-button-border es-button" style="border-color: #413C58; background: #413C58; color:#fff; text-align: center; padding: 20px 50px;"><span>See More</span></a>
+                                </td>
+                          </tr>
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                    </tbody>
+                    </table>
+                  </td>
+                  </tr>
+                </tbody>
+            </table> 
+        <!-----SOCIAL------>    
+            <table class="es-header" align="center">
+            <tbody>
+              <tr>
+              <td class="esd-stripe" align="center">
+                <table class="es-header-body" width="600"  align="center" style="background-color: #F9FBEF; border-top: #3f3f3f solid 1px; border-bottom: #3f3f3f solid 1px">
+                <tbody>
+                  <tr>
+    
+                  <td class="esd-structure es-p20t es-p20b es-p15r es-p15l" align="left" >
+
+                      <table class="es-left" align="left">
+                        <tbody>
+                          <tr>
+                          <td width="110" align="left" class="esd-container-frame es-m-p20b">
+                            <table width="100%">
+                            <tbody>
+                              <tr>
+                              <td align="left" class="esd-block-text es-m-txt-c"><img src="Img/logo-no-background.png" alt="with us" width="150"></td>
+                              </tr>
+                            </tbody>
+                            </table></td>
+                          </tr>
+                        </tbody>
+                        </table>
+                    <table align="right" class="es-right">
+                    <tbody>
+                      <tr>
+    
+                      <td width="220" class="esd-container-frame es-m-p20b" align="center" >
+                        <table width="100%">
+                        <tbody>
+                          <tr>
+    
+                          <td class="esd-block-menu"  esd-tmp-menu-font-weight="bold" esd-tmp-menu-color="#cccccc">
+                            <table width="100%" class="es-menu" style="padding-top: 30px;">
+                            <tbody>
+                              <tr>
+                              <td align="center"  width="33.33%" class="es-p10t es-p10b es-p5r es-p5l" style="padding: 5px 5px;"><a target="_blank" href="#"> <img src="Img/circle-facebook.png"  width="50"></a></td>
+                              <td align="center" width="33.33%" class="es-p10t es-p10b es-p5r es-p5l" style="padding: 5px 5px;"><a target="_blank" href="#" > <img src="Img/circle-instagram.png"width="50"></a></td>
+                              <td align="center" width="33.33%" class="es-p10t es-p10b es-p5r es-p5l" style="padding: 5px 5px"><a target="_blank" href="#"> <img src="Img/circle-twitter.png" width="50"> </a></td>
+                              <td align="center" width="33.33%" class="es-p10t es-p10b es-p5r es-p5l" style="padding: 5px 5px"><a target="_blank" href="#"> <img src="Img/circle-youtube.png" width="50"> </a></td>
+                              </tr>
+                            </tbody>
+                            </table></td>
+                          </tr>
+                        </tbody>
+                        </table></td>
+                      <!-- <td class="es-hidden" width="10"></td> -->
+                      </tr>
+                    </tbody>
+                    </table>
+                   </td>
+                  </tr>
+                </tbody>
+                </table></td>
+              </tr>
+            </tbody>
+            </table>
+            <table class="es-footer" align="center">
+                <tbody>
+                  <tr>
+                  <td class="esd-stripe" align="center">
+                    <table  class="es-footer-body" align="center" width="600" style="background-color: #F9FBEF;" >
+                    <tbody>
+                      <tr>
+                      <td class="esd-structure es-p30t es-p30b es-p15r es-p15l" align="left">
+                        <table width="100%">
+                        <tbody>
+                          <tr>
+                          <td width="570" class="esd-container-frame" align="center" valign="top">
+                            <table width="100%">
+                            <tbody>
+                              <tr>
+                              <td align="center" class="esd-block-text"><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br><a target="_blank" href="#">Privacy police</a> | <a target="_blank" href="#">Unsubscribe</a></p></td>
+                              </tr>
+                            </tbody>
+                            </table></td>
+                          </tr>
+                        </tbody>
+                        </table></td>
+                      </tr>
+                    </tbody>
+                    </table></td>
+                  </tr>
+                </tbody>
+                </table>
+        </td>
+       </tr>
+    </table>        
+</body>
+</html>
+
+<tbody>
+    <tr>
+     
